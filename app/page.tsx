@@ -34,7 +34,6 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
 export default function LandingPage() {
   const [mounted, setMounted] = useState(false);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
   
   useEffect(() => { setMounted(true); }, []);
 
@@ -43,19 +42,48 @@ export default function LandingPage() {
 
   const partnerLogos = ["cummings.png", "Manny.png", "Tma.png", "diamond.png", "jody.png"];
 
-  // VERCEL BLOB VIDEO LINKS
+  // VERCEL BLOB ASSET LINKS
+  const logoUrl = "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/avora-logo.PNG";
+  const headshotUrl = "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/drew-headshot.JPG";
   const heroVideo = "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/bezr%20show%20real%20-%20HD%201080p.mp4";
   
   const workProjects = [
-    { agent: "Nicole Gentry", label: "217 Steed Ln", file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/%24R0LXLAO.mp4" },
-    { agent: "Kelley Thompson", label: "5944 Tomahawk St", file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/5944%20Tomahawk%20St%20v2.mp4" },
-    { agent: "Tim Markland", label: "2802 Haddaway", file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/2802%20Haddaway%20video.mp4" }
+    { 
+      agent: "Nicole Gentry", 
+      label: "217 Steed Ln", 
+      file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/217%20Steed%20ln%20%281%29.mp4" 
+    },
+    { 
+      agent: "Kelley Thompson", 
+      label: "5944 Tomahawk St", 
+      file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/5944%20Tomahawk%20St%20v2.mp4" 
+    },
+    { 
+      agent: "Tim Markland", 
+      label: "2802 Haddaway", 
+      file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/2802%20Haddaway%20video.mp4" 
+    }
   ];
 
   const servicesData = [
-    { title: "Real Estate", icon: <Video />, desc: "Cinematic listing videos and drone cinematography.", file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/3041%20Rocks%20Rd.mp4" },
-    { title: "Lifestyle Content", icon: <Zap />, desc: "High-end brand narratives that connect with your audience.", file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/Bagel%20Works%20Spotlight.mp4" },
-    { title: "High-Energy Recaps", icon: <Smartphone />, desc: "Fast-paced event and hype edits built for engagement.", file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/armor.mp4" }
+    { 
+      title: "Real Estate", 
+      icon: <Video />, 
+      desc: "Cinematic listing videos and drone cinematography.", 
+      file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/3041%20Rocks%20Rd.mp4" 
+    },
+    { 
+      title: "Lifestyle Content", 
+      icon: <Zap />, 
+      desc: "High-end brand narratives that connect with your audience.", 
+      file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/Bagel%20Works%20Spotlight.mp4" 
+    },
+    { 
+      title: "High-Energy Recaps", 
+      icon: <Smartphone />, 
+      desc: "Fast-paced event and hype edits built for engagement.", 
+      file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/armor.mp4" 
+    }
   ];
 
   const handleNavClick = (e: React.MouseEvent, id: string) => {
@@ -70,12 +98,12 @@ export default function LandingPage() {
     <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-white selection:text-black overflow-x-hidden scroll-smooth text-left cursor-default">
       <motion.div className="fixed top-0 left-0 right-0 h-1 bg-white z-[100] origin-left" style={{ scaleX }} />
 
-      {/* 1. NAVIGATION */}
+      {/* NAVIGATION */}
       <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-6">
         <nav className="flex justify-between items-center w-full max-w-5xl px-8 py-4 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl">
           <div onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="flex items-center gap-3 cursor-pointer group">
             <div className="w-10 h-10 rounded-full overflow-hidden border border-white/10 flex items-center justify-center bg-zinc-900 shadow-inner group-hover:border-white/40 transition-colors">
-              <img src="/avora-logo.png" alt="Logo" className="w-full h-full object-cover" />
+              <img src={logoUrl} alt="Logo" className="w-full h-full object-cover" />
             </div>
             <span className="text-sm font-black tracking-[0.1em] uppercase hidden sm:block group-hover:text-white transition-colors">Avora Media</span>
           </div>
@@ -89,7 +117,7 @@ export default function LandingPage() {
         </nav>
       </div>
 
-      {/* 2. HERO SECTION */}
+      {/* HERO SECTION */}
       <header className="relative w-full h-[95vh] flex flex-col justify-center overflow-hidden">
         <div className="absolute inset-0 z-0 bg-black">
           <video autoPlay loop muted playsInline src={heroVideo} className="w-full h-full object-cover opacity-20 grayscale" />
@@ -107,7 +135,7 @@ export default function LandingPage() {
         </div>
       </header>
 
-      {/* 3. LOGO SCROLL */}
+      {/* LOGO SCROLL */}
       <div className="w-full overflow-hidden bg-[#050505] pt-12 pb-32 relative group border-b border-white/5 mt-[-10vh] z-30">
         <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#050505] via-[#050505]/95 to-transparent z-20 pointer-events-none" />
         <div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#050505] via-[#050505]/95 to-transparent z-20 pointer-events-none" />
@@ -122,7 +150,7 @@ export default function LandingPage() {
         </div>
       </div>
 
-      {/* 4. WORK SECTION */}
+      {/* WORK SECTION */}
       <section id="work" className="px-6 py-32 max-w-7xl mx-auto scroll-mt-32">
         <div className="mb-20 text-left">
             <span className="text-zinc-600 uppercase text-[10px] tracking-[0.6em] font-bold mb-4 block">Archive</span>
@@ -142,12 +170,12 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 5. ABOUT SECTION */}
+      {/* ABOUT SECTION */}
       <section id="about" className="px-6 py-40 max-w-7xl mx-auto border-t border-white/5 scroll-mt-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center text-left">
           <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="relative">
             <div className="aspect-square bg-zinc-900 rounded-[4rem] overflow-hidden border border-white/5 shadow-2xl">
-                <img src="/drew-headshot.jpg" alt="Drew" className="w-full h-full object-cover grayscale transition duration-1000 hover:grayscale-0" />
+                <img src={headshotUrl} alt="Drew" className="w-full h-full object-cover grayscale transition duration-1000 hover:grayscale-0" />
             </div>
             <div className="absolute -bottom-8 -right-8 bg-white text-black p-10 rounded-[2.5rem] hidden md:block shadow-2xl z-30 text-left font-black">
                 <p className="text-[10px] uppercase tracking-[0.4em] font-bold mb-2 text-zinc-400 leading-none">Creative Director</p>
@@ -171,7 +199,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 6. SERVICES SECTION */}
+      {/* SERVICES SECTION */}
       <section id="services" className="px-6 py-40 bg-white text-black rounded-[5rem] mx-3 shadow-2xl text-left scroll-mt-32">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-7xl font-black tracking-tighter uppercase leading-[0.8] mb-24 text-left leading-none">Built to Scale.</h2>
@@ -189,7 +217,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 7. FAQ */}
+      {/* FAQ */}
       <section id="faq" className="px-6 py-40 max-w-5xl mx-auto scroll-mt-32 border-t border-white/5">
         <div className="mb-20 text-left leading-none">
             <span className="text-zinc-600 uppercase text-[10px] tracking-[0.6em] font-bold mb-4 block leading-none font-mono">Common Queries</span>
@@ -203,7 +231,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 8. BOOKING OVERLAY */}
+      {/* BOOKING OVERLAY */}
       <AnimatePresence>
         {isBookingOpen && (
           <motion.div initial={{ y: "100%" }} animate={{ y: 0 }} exit={{ y: "100%" }} transition={{ type: "spring", damping: 25, stiffness: 200 }} className="fixed inset-0 z-[200] bg-[#050505] p-4 md:p-8 flex flex-col text-left">

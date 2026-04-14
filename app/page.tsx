@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { 
-  ArrowUpRight, Smartphone, Video, Zap, Target, X, BarChart3, Plus, Share2 
+  ArrowUpRight, Smartphone, Video, Zap, Target, X, BarChart3, Plus, Share2, Instagram, Mail
 } from 'lucide-react';
 
 const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
@@ -248,27 +248,41 @@ export default function LandingPage() {
                 <span className="text-xl font-black tracking-tighter uppercase leading-none">Avora Media</span>
               </div>
               <p className="text-zinc-500 text-lg font-light leading-relaxed max-w-sm leading-none">Visuals that convert. Based in Maryland, serving clients globally.</p>
-              <div className="flex gap-6 leading-none">
-                <a href="https://instagram.com/avora.media" target="_blank" className="p-4 bg-white/5 rounded-full border border-white/10 hover:bg-white/10 transition-colors leading-none"><Share2 size={20} /></a>
+              
+              {/* SOCIAL LINKS */}
+              <div className="flex gap-4 leading-none pt-4">
+                <a href="https://instagram.com/avora.media" target="_blank" className="p-4 bg-white/5 rounded-full border border-white/10 hover:bg-white/10 hover:border-white/40 transition-all leading-none">
+                  <Instagram size={20} />
+                </a>
+                <a href="mailto:drew@avoramedia.co" className="p-4 bg-white/5 rounded-full border border-white/10 hover:bg-white/10 hover:border-white/40 transition-all leading-none">
+                  <Mail size={20} />
+                </a>
               </div>
             </div>
+            
             <div className="md:col-span-3 leading-none">
               <h5 className="text-[10px] uppercase tracking-[0.4em] font-black text-white/20 mb-10 leading-none">Sitemap</h5>
               <ul className="space-y-6 text-sm font-black uppercase tracking-widest leading-none">
                 <li><a href="#work" onClick={(e) => handleNavClick(e, 'work')} className="text-zinc-500 hover:text-white transition-colors leading-none">Work</a></li>
                 <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-zinc-500 hover:text-white transition-colors leading-none">About</a></li>
                 <li><a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="text-zinc-500 hover:text-white transition-colors leading-none">Services</a></li>
+                <li><a href="#faq" onClick={(e) => handleNavClick(e, 'faq')} className="text-zinc-500 hover:text-white transition-colors leading-none">FAQ</a></li>
               </ul>
             </div>
+            
             <div className="md:col-span-3 leading-none">
               <h5 className="text-[10px] uppercase tracking-[0.4em] font-black text-white/20 mb-10 leading-none">Contact</h5>
-              <p className="text-sm font-black uppercase tracking-widest text-zinc-500 leading-none hover:text-white transition-colors cursor-pointer">Inquiries@avoramedia.co</p>
+              <a href="mailto:drew@avoramedia.co" className="text-sm font-black uppercase tracking-widest text-zinc-500 leading-none hover:text-white transition-colors cursor-pointer block mb-4">
+                drew@avoramedia.co
+              </a>
+              <p className="text-[10px] text-zinc-600 font-black uppercase tracking-widest">Available for Worldwide Travel</p>
             </div>
           </div>
+          
           <div className="pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 leading-none">
             <p className="text-[9px] text-zinc-700 uppercase tracking-[0.6em] font-black leading-none">© 2026 Avora Media Group. All rights reserved.</p>
             <div className="flex gap-12 leading-none">
-              <span className="text-[9px] text-zinc-700 uppercase tracking-[0.6em] font-black leading-none italic">Est. 2024</span>
+              <span className="text-[9px] text-zinc-700 uppercase tracking-[0.6em] font-black leading-none italic">Designed by Avora</span>
             </div>
           </div>
         </div>

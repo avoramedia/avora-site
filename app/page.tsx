@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { 
   ArrowUpRight, 
@@ -10,12 +10,9 @@ import {
   X, 
   BarChart3, 
   Plus,
-  Instagram,
-  Facebook,
-  Music2
+  Share2 // Using a universal icon to prevent build errors
 } from 'lucide-react';
 
-// Reusable FAQ Component
 const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -62,7 +59,6 @@ export default function LandingPage() {
 
   const partnerLogos = ["cummings.png", "Manny.png", "Tma.png", "diamond.png", "jody.png"];
 
-  // VERCEL BLOB ASSET MASTER LINKS
   const logoUrl = "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/avora-logo.PNG";
   const headshotUrl = "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/drew-headshot.JPG";
   const heroVideo = "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/bezr%20show%20real%20-%20HD%201080p.mp4";
@@ -327,19 +323,19 @@ export default function LandingPage() {
               <ul className="space-y-6">
                 <li>
                   <a href="https://www.instagram.com/avora.media" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-all flex items-center gap-4 group">
-                    <Instagram size={20} />
+                    <Share2 size={20} />
                     <span className="text-xs uppercase tracking-widest font-black group-hover:translate-x-1 transition-transform">Instagram</span>
                   </a>
                 </li>
                 <li>
                   <a href="https://www.facebook.com/people/Avora-Media/61575353782521/" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-all flex items-center gap-4 group">
-                    <Facebook size={20} />
+                    <Share2 size={20} />
                     <span className="text-xs uppercase tracking-widest font-black group-hover:translate-x-1 transition-transform">Facebook</span>
                   </a>
                 </li>
                 <li>
                   <a href="https://www.tiktok.com/@avoramedia.co" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-all flex items-center gap-4 group">
-                    <Music2 size={20} />
+                    <Share2 size={20} />
                     <span className="text-xs uppercase tracking-widest font-black group-hover:translate-x-1 transition-transform">TikTok</span>
                   </a>
                 </li>

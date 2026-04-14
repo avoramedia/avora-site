@@ -2,7 +2,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { 
-  ArrowUpRight, Smartphone, Video, Zap, Target, X, BarChart3, Plus, Share2, Instagram, Mail
+  ArrowUpRight, 
+  Smartphone, 
+  Video, 
+  Zap, 
+  Target, 
+  X, 
+  BarChart3, 
+  Plus, 
+  Share2 
 } from 'lucide-react';
 
 const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
@@ -249,13 +257,9 @@ export default function LandingPage() {
               </div>
               <p className="text-zinc-500 text-lg font-light leading-relaxed max-w-sm leading-none">Visuals that convert. Based in Maryland, serving clients globally.</p>
               
-              {/* SOCIAL LINKS */}
               <div className="flex gap-4 leading-none pt-4">
                 <a href="https://instagram.com/avora.media" target="_blank" className="p-4 bg-white/5 rounded-full border border-white/10 hover:bg-white/10 hover:border-white/40 transition-all leading-none">
-                  <Instagram size={20} />
-                </a>
-                <a href="mailto:drew@avoramedia.co" className="p-4 bg-white/5 rounded-full border border-white/10 hover:bg-white/10 hover:border-white/40 transition-all leading-none">
-                  <Mail size={20} />
+                  <Share2 size={20} />
                 </a>
               </div>
             </div>
@@ -275,7 +279,7 @@ export default function LandingPage() {
               <a href="mailto:drew@avoramedia.co" className="text-sm font-black uppercase tracking-widest text-zinc-500 leading-none hover:text-white transition-colors cursor-pointer block mb-4">
                 drew@avoramedia.co
               </a>
-              <p className="text-[10px] text-zinc-600 font-black uppercase tracking-widest">Available for Worldwide Travel</p>
+              <p className="text-[10px] text-zinc-600 font-black uppercase tracking-widest leading-none">Available for Worldwide Travel</p>
             </div>
           </div>
           

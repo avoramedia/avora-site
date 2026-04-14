@@ -248,7 +248,7 @@ export default function LandingPage() {
       <footer className="bg-zinc-950 pt-32 pb-16 px-6 border-t border-white/5 font-sans text-left leading-none">
         <div className="max-w-7xl mx-auto leading-none">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-24 leading-none text-left">
-            <div className="md:col-span-6 space-y-8 leading-none">
+            <div className="md:col-span-4 space-y-8 leading-none">
               <div onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="flex items-center gap-3 cursor-pointer group leading-none">
                 <div className="w-10 h-10 rounded-full overflow-hidden border border-white/10 flex items-center justify-center bg-zinc-900 leading-none">
                   <img src={assets.logo} alt="Logo" className="w-full h-full object-cover rounded-full leading-none" />
@@ -256,21 +256,24 @@ export default function LandingPage() {
                 <span className="text-xl font-black tracking-tighter uppercase leading-none">Avora Media</span>
               </div>
               <p className="text-zinc-500 text-lg font-light leading-relaxed max-w-sm leading-none">Visuals that convert. Based in Maryland, serving clients globally.</p>
-              
-              <div className="flex gap-4 leading-none pt-4">
-                <a href="https://instagram.com/avora.media" target="_blank" className="p-4 bg-white/5 rounded-full border border-white/10 hover:bg-white/10 hover:border-white/40 transition-all leading-none">
-                  <Share2 size={20} />
-                </a>
-              </div>
             </div>
             
-            <div className="md:col-span-3 leading-none">
+            <div className="md:col-span-2 leading-none">
               <h5 className="text-[10px] uppercase tracking-[0.4em] font-black text-white/20 mb-10 leading-none">Sitemap</h5>
               <ul className="space-y-6 text-sm font-black uppercase tracking-widest leading-none">
                 <li><a href="#work" onClick={(e) => handleNavClick(e, 'work')} className="text-zinc-500 hover:text-white transition-colors leading-none">Work</a></li>
                 <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="text-zinc-500 hover:text-white transition-colors leading-none">About</a></li>
                 <li><a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="text-zinc-500 hover:text-white transition-colors leading-none">Services</a></li>
                 <li><a href="#faq" onClick={(e) => handleNavClick(e, 'faq')} className="text-zinc-500 hover:text-white transition-colors leading-none">FAQ</a></li>
+              </ul>
+            </div>
+
+            <div className="md:col-span-3 leading-none">
+              <h5 className="text-[10px] uppercase tracking-[0.4em] font-black text-white/20 mb-10 leading-none">Socials</h5>
+              <ul className="space-y-6 text-sm font-black uppercase tracking-widest leading-none">
+                <li><a href="https://instagram.com/avora.media" target="_blank" className="text-zinc-500 hover:text-white transition-colors flex items-center gap-3 leading-none"><Share2 size={14} /> Instagram</a></li>
+                <li><a href="https://facebook.com/avoramedia" target="_blank" className="text-zinc-500 hover:text-white transition-colors flex items-center gap-3 leading-none"><Share2 size={14} /> Facebook</a></li>
+                <li><a href="https://tiktok.com/@avoramedia" target="_blank" className="text-zinc-500 hover:text-white transition-colors flex items-center gap-3 leading-none"><Share2 size={14} /> TikTok</a></li>
               </ul>
             </div>
             

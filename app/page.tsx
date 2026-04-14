@@ -9,7 +9,10 @@ import {
   Target, 
   X, 
   BarChart3, 
-  Plus 
+  Plus,
+  Instagram,
+  Facebook,
+  Music2
 } from 'lucide-react';
 
 const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
@@ -42,21 +45,48 @@ export default function LandingPage() {
 
   const partnerLogos = ["cummings.png", "Manny.png", "Tma.png", "diamond.png", "jody.png"];
 
-  // VERCEL BLOB ASSET LINKS
+  // VERCEL BLOB ASSET MASTER LINKS
   const logoUrl = "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/avora-logo.PNG";
   const headshotUrl = "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/drew-headshot.JPG";
   const heroVideo = "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/bezr%20show%20real%20-%20HD%201080p.mp4";
   
   const workProjects = [
-    { agent: "Nicole Gentry", label: "217 Steed Ln", file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/217%20Steed%20ln%20%281%29.mp4" },
-    { agent: "Kelley Thompson", label: "5944 Tomahawk St", file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/5944%20Tomahawk%20St%20v2.mp4" },
-    { agent: "Tim Markland", label: "2802 Haddaway", file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/2802%20Haddaway%20video.mp4" }
+    { 
+      agent: "Nicole Gentry", 
+      label: "217 Steed Ln", 
+      file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/217%20Steed%20ln%20%281%29.mp4" 
+    },
+    { 
+      agent: "Kelley Thompson", 
+      label: "5944 Tomahawk St", 
+      file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/5944%20Tomahawk%20St%20v2.mp4" 
+    },
+    { 
+      agent: "Tim Markland", 
+      label: "2802 Haddaway", 
+      file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/2802%20Haddaway%20video.mp4" 
+    }
   ];
 
   const servicesData = [
-    { title: "Real Estate", icon: <Video />, desc: "Cinematic listing videos and drone cinematography.", file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/3041%20Rocks%20Rd.mp4" },
-    { title: "Lifestyle Content", icon: <Zap />, desc: "High-end brand narratives that connect with your audience.", file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/Bagel%20Works%20Spotlight.mp4" },
-    { title: "High-Energy Recaps", icon: <Smartphone />, desc: "Fast-paced event and hype edits built for engagement.", file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/armor.mp4" }
+    { 
+      title: "Real Estate", 
+      icon: <Video />, 
+      desc: "Cinematic listing videos and drone cinematography.", 
+      file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/3041%20Rocks%20Rd.mp4" 
+    },
+    { 
+      title: "Lifestyle Content", 
+      icon: <Zap />, 
+      desc: "High-end brand narratives that connect with your audience.", 
+      file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/Bagel%20Works%20Spotlight.mp4" 
+    },
+    { 
+      title: "High-Energy Recaps", 
+      icon: <Smartphone />, 
+      desc: "Fast-paced event and hype edits built for engagement.", 
+      file: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/armor.mp4" 
+    }
   ];
 
   const handleNavClick = (e: React.MouseEvent, id: string) => {
@@ -224,7 +254,9 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-24 leading-none text-left">
             <div className="md:col-span-6 space-y-8">
               <div onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="flex items-center gap-4 cursor-pointer group leading-none">
-                <div className="w-10 h-10 rounded-full overflow-hidden border border-white/10 bg-zinc-900 flex items-center justify-center"><img src={logoUrl} alt="" className="w-full h-full object-cover" /></div>
+                <div className="w-10 h-10 rounded-full overflow-hidden border border-white/10 bg-zinc-900 flex items-center justify-center">
+                  <img src={logoUrl} alt="" className="w-full h-full object-cover" />
+                </div>
                 <span className="text-2xl font-black tracking-[0.1em] uppercase group-hover:text-white transition-colors">Avora Media</span>
               </div>
               <p className="text-zinc-500 max-w-sm text-lg font-light leading-relaxed italic">High-velocity social growth. Based in Maryland.</p>
@@ -233,9 +265,24 @@ export default function LandingPage() {
             <div className="md:col-span-3 space-y-8 text-left">
               <h5 className="text-[10px] tracking-[0.5em] text-zinc-600 uppercase font-black">Social</h5>
               <ul className="space-y-6">
-                <li><a href="https://www.instagram.com/avora.media" target="_blank" className="text-zinc-400 hover:text-white transition-all flex items-center gap-4 group"><span className="text-xs uppercase tracking-widest font-black group-hover:translate-x-1 transition-transform">Instagram</span></a></li>
-                <li><a href="https://www.facebook.com/people/Avora-Media/61575353782521/" target="_blank" className="text-zinc-400 hover:text-white transition-all flex items-center gap-4 group"><span className="text-xs uppercase tracking-widest font-black group-hover:translate-x-1 transition-transform">Facebook</span></a></li>
-                <li><a href="https://www.tiktok.com/@avoramedia.co" target="_blank" className="text-zinc-400 hover:text-white transition-all flex items-center gap-4 group"><span className="text-xs uppercase tracking-widest font-black group-hover:translate-x-1 transition-transform">TikTok</span></a></li>
+                <li>
+                  <a href="https://www.instagram.com/avora.media" target="_blank" className="text-zinc-400 hover:text-white transition-all flex items-center gap-4 group">
+                    <Instagram size={20} />
+                    <span className="text-xs uppercase tracking-widest font-black group-hover:translate-x-1 transition-transform">Instagram</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/people/Avora-Media/61575353782521/" target="_blank" className="text-zinc-400 hover:text-white transition-all flex items-center gap-4 group">
+                    <Facebook size={20} />
+                    <span className="text-xs uppercase tracking-widest font-black group-hover:translate-x-1 transition-transform">Facebook</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/@avoramedia.co" target="_blank" className="text-zinc-400 hover:text-white transition-all flex items-center gap-4 group">
+                    <Music2 size={20} />
+                    <span className="text-xs uppercase tracking-widest font-black group-hover:translate-x-1 transition-transform">TikTok</span>
+                  </a>
+                </li>
               </ul>
             </div>
             <div className="md:col-span-3 space-y-6 text-left">
@@ -243,7 +290,9 @@ export default function LandingPage() {
               <p className="text-zinc-400 text-sm font-black underline cursor-pointer hover:text-white transition-colors">drew@avoramedia.co</p>
             </div>
           </div>
-          <div className="pt-16 border-t border-white/5 text-center text-[9px] text-zinc-700 uppercase tracking-[0.6em] font-bold"><p>© 2026 Avora Media Group. All rights reserved.</p></div>
+          <div className="pt-16 border-t border-white/5 text-center text-[9px] text-zinc-700 uppercase tracking-[0.6em] font-bold">
+            <p>© 2026 Avora Media Group. All rights reserved.</p>
+          </div>
         </div>
       </footer>
     </div>

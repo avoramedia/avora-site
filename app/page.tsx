@@ -272,8 +272,8 @@ export default function LandingPage() {
               <h5 className="text-[10px] uppercase tracking-[0.4em] font-black text-white/20 mb-10 leading-none">Socials</h5>
               <ul className="space-y-6 text-sm font-black uppercase tracking-widest leading-none">
                 <li><a href="https://instagram.com/avora.media" target="_blank" className="text-zinc-500 hover:text-white transition-colors flex items-center gap-3 leading-none"><Share2 size={14} /> Instagram</a></li>
-                <li><a href="https://facebook.com/avoramedia" target="_blank" className="text-zinc-500 hover:text-white transition-colors flex items-center gap-3 leading-none"><Share2 size={14} /> Facebook</a></li>
-                <li><a href="https://tiktok.com/@avoramedia" target="_blank" className="text-zinc-500 hover:text-white transition-colors flex items-center gap-3 leading-none"><Share2 size={14} /> TikTok</a></li>
+                <li><a href="https://www.facebook.com/people/Avora-Media/61575353782521/" target="_blank" className="text-zinc-500 hover:text-white transition-colors flex items-center gap-3 leading-none"><Share2 size={14} /> Facebook</a></li>
+                <li><a href="https://www.tiktok.com/@avoramedia.co" target="_blank" className="text-zinc-500 hover:text-white transition-colors flex items-center gap-3 leading-none"><Share2 size={14} /> TikTok</a></li>
               </ul>
             </div>
             

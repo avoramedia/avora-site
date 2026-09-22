@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "High-fidelity video assets designed to dominate social feeds.",
   icons: {
     // This pulls your high-res logo directly from the cloud
-    icon: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/avora-logo.PNG",
+    icon: "https://www.dropbox.com/scl/fi/e6f984abput61351ssqdk/Avora-Logo.png?rlkey=z6p2y49s0me7xxm4jtq3j4nmp&st=nfad3c5t&dl=0",
     shortcut: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/avora-logo.PNG",
     apple: "https://e3nsj1twgnbict6m.public.blob.vercel-storage.com/avora-logo.PNG",
   },

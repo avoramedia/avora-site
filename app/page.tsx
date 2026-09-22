@@ -61,7 +61,7 @@ export default function LandingPage() {
   const dropboxDirect = (url: string) => url ? url.replace('dl=0', 'raw=1') : "";
 
   const assets = {
-    logo: dropboxDirect("https://www.dropbox.com/scl/fi/bybsclb6xgwateis75for/avora-logo.PNG?rlkey=g1dphpanvc7n0n0it8ccufkc1&st=zwmlj2vn&dl=0"),
+    logo: dropboxDirect("https://www.dropbox.com/scl/fi/e6f984abput61351ssqdk/Avora-Logo.png?rlkey=z6p2y49s0me7xxm4jtq3j4nmp&st=nfad3c5t&dl=0"),
     headshot: dropboxDirect("https://www.dropbox.com/scl/fi/eitqvyl0q5fgbg45mycd5/3C7C2ACC-6484-4AFA-BD7C-45FA5E8F851D-3.JPG?rlkey=2nc5qkt1j4t253qanlxu0o5s9&st=t2yj6htn&dl=0"),
     heroVideo: dropboxDirect("https://www.dropbox.com/scl/fi/k0iq9kz5kbmbmjbseq03o/bezr-show-real-HD-1080p.mp4?rlkey=i99q3sg0p5nm9us4pr4pvd0ds&st=6e5dm2fr&dl=0"), 
     steedLn: dropboxDirect("https://www.dropbox.com/scl/fi/luvg4s2ltcl6kjz701xd4/217-Steed-ln-1.mp4?rlkey=wp092r8p7iz3wj32h5zf6qk6a&st=zalusayv&dl=0"), 
